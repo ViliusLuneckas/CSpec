@@ -28,5 +28,8 @@ Testing example:
   }
 ```
 To test, type:
-  $ make
-  $ ./cspec_test_suit
+
+    $ make
+
+  
+    $ ./cspec_test_suit
