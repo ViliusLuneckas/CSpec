@@ -31,5 +31,4 @@ To test, type:
 
     $ make
 
-  
     $ ./cspec_test_suit
