@@ -20,6 +20,11 @@ void CSpec_init()
   initialized = 1;
 }
 
+void describe_f(const char * suit_name)
+{
+  if (!initialized) CSpec_init();
+}
+
 void it_f(const char * test_name)
 {
   if (!initialized) CSpec_init();
@@ -37,7 +42,14 @@ void should(char * assert, ...)
     if (a == b){
       printf(".");
     }else{
-      printf("\nFailure: %s\n\t%i expected to be %i\n", CSpec.last_name, b, a);
+      printf("\nFailure: it %s\n\t%i expected to be %i\n", CSpec.last_name, b, a);
+    }
+  }else if (strcmp(assert, "beEqualD") == 0) {
+    double a = va_arg(args, double), b = va_arg(args, double);
+    if (a == b){
+      printf(".");
+    }else{
+      printf("\nFailure: it %s\n\t%d expected to be %d\n", CSpec.last_name, b, a);
     }
   }else{
     printf("*");

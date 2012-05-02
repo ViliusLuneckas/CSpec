@@ -3,5 +3,4 @@
 
 #include "../cspec.h"
 #include "../array/array.h"
-
 #endif

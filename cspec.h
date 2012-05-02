@@ -12,8 +12,11 @@
 
 #define it(...) do{ it_f(__VA_ARGS__);} while(0);
 
+#define describe(...) do{ describe_f(__VA_ARGS__);} while(0);
 
 void it_f(const char * test_name);
+
+void describe_f(const char * suit_name);
 
 //matchers
 void should(char * assert, ...);
